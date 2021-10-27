@@ -1,0 +1,190 @@
+*
+{
+
+margin:0; padding:0; box-sizing:border-box;
+
+}
+
+
+.riaz_body 
+{
+
+background-color:black; font-family:sans-serif; 
+
+}
+
+
+.riaz_header
+{
+
+display:flex; justify-content:space-between; align-items:center;
+
+position:relative; top:0; left:0; height:100px; width:100%;
+
+background-color:hsl(222,100%,50%); color:white;
+
+text-indent:10px;
+
+}
+
+
+.menu
+{
+
+display:flex; justify-content:center; align-items:center;
+
+flex-direction:column; margin-right:10px;
+
+
+}
+
+.mhr
+{
+
+height:5px; width:50px; border:none; background-color:white;
+
+margin:5px; 
+
+
+}
+
+
+.time_message
+{
+
+display:grid; grid-template-columns:50% 50%; align-items:center;
+
+height:60px; font-size:25px; justify-content:center;
+
+}
+
+.time, .message
+{
+
+display:flex; justify-content:center;
+
+color:cyan; font-family:monospace;
+
+}
+
+
+.introduction
+{
+
+margin:20px; padding:20px;  line-height:45px; letter-spacing:1px; word-spacing:1px;
+
+font-size:20px; font-family:sans-serif; color:cyan; background-color:hsl(222,100%,50%);
+
+color:white;
+
+}
+
+.live
+{
+
+
+color:cyan; display:flex; justify-content:center; align-items:center;
+
+min-height:500px; font-size:40px; margin:20px; padding:20px; line-height:65px;
+
+overflow-y:auto; overflow-x:hidden;
+}
+
+
+.more
+{
+
+
+display:grid; grid-template-columns:30% 30% 30%;
+
+column-gap:10px; grid-template-rows:auto; 
+
+justify-content:space-around;
+
+}
+
+.d1
+{
+
+display:flex; flex-direction:column; padding:10px;
+
+background-color:springgreen; color:black; line-height:45px; font-size:20px;
+
+align-items:center; justify-content:center;
+
+}
+
+.d2
+{
+display:flex; flex-direction:column; padding:10px;
+
+background-color:crimson; color:black; line-height:45px; font-size:20px;
+
+align-items:center; justify-content:center;
+
+
+}
+
+.d3
+{
+
+display:flex; flex-direction:column; padding:10px;
+
+background-color:cyan; color:black; line-height:45px; font-size:20px;
+
+align-items:center; justify-content:center;
+
+}
+
+
+.mail { font-size:15px; padding-left:12px; padding-right:10px; font-size:10px;
+
+font-weight:bold;
+ }
+
+/*
+aside
+{
+
+position:fixed; top:0; left:0; width:100%; min-height:100vh; background-color:black;
+
+display:flex; flex-direction:column; 
+
+align-items:center; justify-content:center; overflow-x:hidden; overflow-y:auto;
+
+}
+
+
+aside p { background-color:cyan; color:black; padding:10px; margin:10px; width:150px;
+
+display:flex; justify-content:center; align-items:center; font-size:100%;
+
+}
+
+aside p:hover , aside p:active
+{
+background-color:crimson;
+
+}
+
+aside p span { display:flex; justify-content:flex-end; align-items:center; margin-left:5px;}
+
+
+
+aside p:last-child { background:yellow;}
+
+*/
+
+@media all and (min-width:200px) and (max-width:800px)
+{
+
+.more { display:flex; flex-direction:column;}
+
+.d1, .d2, .d3 { margin:20px; display:flex; justify-content:center; font-size:120%;}
+
+
+}
+
+.riaz_footer { height:100px; display:flex; justify-content:center; align-items:center;}
+
+.copyright { color:cyan; text-align:center;}

@@ -97,12 +97,211 @@
 
 		<meta name="news_keywords"	content="Riaz Sheikh, Learn C++, Software Developer">
 
+<!-- ================================================= -->
+		
+		<style media="all">
+			
+			*
+{
+
+margin:0; padding:0; box-sizing:border-box;
+
+}
 
 
-		<link rel="stylesheet" href="src/css/main.css">
+.riaz_body 
+{
 
-	<script src="src/css/main.js" async> </script>
+background-color:black; font-family:sans-serif; 
 
+}
+
+
+.riaz_header
+{
+
+display:flex; justify-content:space-between; align-items:center;
+
+position:relative; top:0; left:0; height:100px; width:100%;
+
+background-color:hsl(222,100%,50%); color:white;
+
+text-indent:10px;
+
+}
+
+
+.menu
+{
+
+display:flex; justify-content:center; align-items:center;
+
+flex-direction:column; margin-right:10px;
+
+
+}
+
+.mhr
+{
+
+height:5px; width:50px; border:none; background-color:white;
+
+margin:5px; 
+
+
+}
+
+
+.time_message
+{
+
+display:grid; grid-template-columns:50% 50%; align-items:center;
+
+height:60px; font-size:25px; justify-content:center;
+
+}
+
+.time, .message
+{
+
+display:flex; justify-content:center;
+
+color:cyan; font-family:monospace;
+
+}
+
+
+.introduction
+{
+
+margin:20px; padding:20px;  line-height:45px; letter-spacing:1px; word-spacing:1px;
+
+font-size:20px; font-family:sans-serif; color:cyan; background-color:hsl(222,100%,50%);
+
+color:white;
+
+}
+
+.live
+{
+
+
+color:cyan; display:flex; justify-content:center; align-items:center;
+
+min-height:500px; font-size:40px; margin:20px; padding:20px; line-height:65px;
+
+overflow-y:auto; overflow-x:hidden;
+}
+
+
+.more
+{
+
+
+display:grid; grid-template-columns:30% 30% 30%;
+
+column-gap:10px; grid-template-rows:auto; 
+
+justify-content:space-around;
+
+}
+
+.d1
+{
+
+display:flex; flex-direction:column; padding:10px;
+
+background-color:springgreen; color:black; line-height:45px; font-size:20px;
+
+align-items:center; justify-content:center;
+
+}
+
+.d2
+{
+display:flex; flex-direction:column; padding:10px;
+
+background-color:crimson; color:black; line-height:45px; font-size:20px;
+
+align-items:center; justify-content:center;
+
+
+}
+
+.d3
+{
+
+display:flex; flex-direction:column; padding:10px;
+
+background-color:cyan; color:black; line-height:45px; font-size:20px;
+
+align-items:center; justify-content:center;
+
+}
+
+
+.mail { font-size:15px; padding-left:12px; padding-right:10px; font-size:10px;
+
+font-weight:bold;
+ }
+
+/*
+aside
+{
+
+position:fixed; top:0; left:0; width:100%; min-height:100vh; background-color:black;
+
+display:flex; flex-direction:column; 
+
+align-items:center; justify-content:center; overflow-x:hidden; overflow-y:auto;
+
+}
+
+
+aside p { background-color:cyan; color:black; padding:10px; margin:10px; width:150px;
+
+display:flex; justify-content:center; align-items:center; font-size:100%;
+
+}
+
+aside p:hover , aside p:active
+{
+background-color:crimson;
+
+}
+
+aside p span { display:flex; justify-content:flex-end; align-items:center; margin-left:5px;}
+
+
+
+aside p:last-child { background:yellow;}
+
+*/
+
+@media all and (min-width:200px) and (max-width:800px)
+{
+
+.more { display:flex; flex-direction:column;}
+
+.d1, .d2, .d3 { margin:20px; display:flex; justify-content:center; font-size:120%;}
+
+
+}
+
+.riaz_footer { height:100px; display:flex; justify-content:center; align-items:center;}
+
+.copyright { color:cyan; text-align:center;}
+
+			
+			
+		</style>
+		
+		
+		
+		
+		
+<!-- =================================================== -->
+		
 	</head>
 
 
@@ -273,7 +472,114 @@
 
 	</footer>
 
+<script type="text/javascript" async>
+	
+	
+function show_time()
+{
 
+let box = document.querySelector(".time");
+
+let msg = document.querySelector(".message");
+
+let live = document.querySelector(".live");
+
+let d1 = document.querySelector(".d1");
+
+let d2 = document.querySelector(".d2");
+
+let d3 = document.querySelector(".d3");
+
+
+
+setInterval(function()
+{
+
+let second = new Date().getSeconds();
+
+let minute = new Date().getMinutes();
+
+let hour = new Date().getHours();
+
+
+box.innerHTML= hour + " : " +  minute + " : " + " : " + second;
+
+
+
+if(hour < 12)
+{
+msg.innerHTML="Good Morning .. ";
+}
+
+else if(hour < 17)
+{
+msg.innerHTML = "Good Afternoon ...";
+}
+
+
+else if(hour < 20)
+{
+msg.innerHTML="Good Evening ... ";
+}
+
+
+else if(hour >= 20 && hour <= 24) 
+{
+
+msg.innerHTML="Good Night";
+
+}
+
+
+// ===============
+
+switch(second)
+{
+
+case 1: live.innerHTML = "Riaz Sheikh is C++ Programmer"; break;
+
+
+
+case 4: live.innerHTML = "Programming is his Passion"; break;
+
+case 8: live.innerHTML="Riaz Loves Linux operating system"; break;
+
+case 12: live.innerHTML="contact Riaz for Develop custom softwares"; break;
+
+case 16: live.innerHTML="Riaz will writes Code and build software as per your need"; break;
+
+case 22: live.innerHTML="Riaz can write software in C++, Python and C#, web (html + css + javascript + php + mysql ) programming language"; break;
+
+
+case 30: live.innerHTML="to make your website accessible for each Device call Riaz to develop web-application"; break;
+
+case 35: live.innerHTML="riaz writes sufficient code that transform website into an app which looks like native application by interface and its speed might be as much fast as possible "; break;
+
+
+case 45: live.innerHTML="riaz prefer to Develop application in c and C++ Programming for speed and accurate control over hardware resources "; break;
+
+
+case 55: live.innerHTML="Mail Riaz Sheikh for Develop apps "; break;
+
+} // end of switch statement
+
+
+
+
+
+},100);
+
+
+}
+
+show_time();
+
+// ===================================================
+
+	
+	
+	
+	</script>
 
 
 </body>
